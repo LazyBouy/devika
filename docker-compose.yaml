@@ -35,7 +35,7 @@ services:
       retries: 5
       start_period: 30s
     volumes:
-      - devika-backend-dbstore:/home/nonroot/devika/db
+      - ./devika-backend-dbstore:/home/nonroot/devika/db
     networks:
       - devika-subnetwork
 
@@ -48,9 +48,9 @@ services:
     depends_on:
       - devika-backend-engine
     expose:
-      - 3000
+      - 3001
     ports:
-      - 3000:3000
+      - 3001:3000
     networks:
       - devika-subnetwork
 
